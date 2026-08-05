@@ -8,9 +8,9 @@
  *
  */
 
-namespace Piwik\Plugins\TreemapVisualization;
+namespace Matomo\Plugins\TreemapVisualization;
 
-use Piwik\Plugins\CoreVisualizations\Visualizations\Graph\Config as GraphConfig;
+use Matomo\Plugins\CoreVisualizations\Visualizations\Graph\Config as GraphConfig;
 
 /**
  * DataTable Visualization that derives from HtmlTable and sets show_extra_columns to true.

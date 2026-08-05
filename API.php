@@ -8,23 +8,23 @@
  *
  */
 
-namespace Piwik\Plugins\TreemapVisualization;
+namespace Matomo\Plugins\TreemapVisualization;
 
-use Piwik\API\Request;
-use Piwik\Common;
-use Piwik\DataTable;
-use Piwik\Http\BadRequestException;
-use Piwik\Metrics;
-use Piwik\Period\Range;
-use Piwik\Piwik;
-use Piwik\Plugins\TreemapVisualization\Visualizations\Treemap;
+use Matomo\API\Request;
+use Matomo\Common;
+use Matomo\DataTable;
+use Matomo\Http\BadRequestException;
+use Matomo\Metrics;
+use Matomo\Period\Range;
+use Matomo\Matomo;
+use Matomo\Plugins\TreemapVisualization\Visualizations\Treemap;
 
 /**
  * Exposes report data formatted for the Treemap visualization.
  *
- * @method static \Piwik\Plugins\TreemapVisualization\API getInstance()
+ * @method static \Matomo\Plugins\TreemapVisualization\API getInstance()
  */
-class API extends \Piwik\Plugin\API
+class API extends \Matomo\Plugin\API
 {
     /**
      * Returns report data formatted for the Treemap visualization.
@@ -65,7 +65,7 @@ class API extends \Piwik\Plugin\API
         $disAllowedApiActions = ['getBulkRequest'];
         // Block if API action does not start with get
         if (!$method || in_array($method, $disAllowedApiActions) || stripos($method, 'get') !== 0) {
-            throw new BadRequestException(Piwik::translate('TreemapVisualization_InvalidApiMethodException'));
+            throw new BadRequestException(Matomo::translate('TreemapVisualization_InvalidApiMethodException'));
         }
 
         if (

@@ -7,12 +7,12 @@
  * @license https://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 
-namespace Piwik\Plugins\TreemapVisualization\tests\Integration;
+namespace Matomo\Plugins\TreemapVisualization\tests\Integration;
 
-use Piwik\Http\BadRequestException;
-use Piwik\Plugins\TreemapVisualization\API;
-use Piwik\Tests\Framework\Fixture;
-use Piwik\Tests\Framework\TestCase\IntegrationTestCase;
+use Matomo\Http\BadRequestException;
+use Matomo\Plugins\TreemapVisualization\API;
+use Matomo\Tests\Framework\Fixture;
+use Matomo\Tests\Framework\TestCase\IntegrationTestCase;
 
 /**
  * @group TreemapVisualization

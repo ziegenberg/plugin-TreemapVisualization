@@ -8,14 +8,14 @@
  *
  */
 
-namespace Piwik\Plugins\TreemapVisualization;
+namespace Matomo\Plugins\TreemapVisualization;
 
-use Piwik\Archive\DataTableFactory;
-use Piwik\Common;
-use Piwik\DataTable;
-use Piwik\DataTable\Filter\CalculateEvolutionFilter;
-use Piwik\DataTable\Map;
-use Piwik\Piwik;
+use Matomo\Archive\DataTableFactory;
+use Matomo\Common;
+use Matomo\DataTable;
+use Matomo\DataTable\Filter\CalculateEvolutionFilter;
+use Matomo\DataTable\Map;
+use Matomo\Matomo;
 
 /**
  * A utility class that generates JSON data meant to be used with the JavaScript
@@ -165,7 +165,7 @@ class TreemapDataGenerator
     /**
      * Generates an array that can be encoded as JSON and used w/ the JavaScript Infovis Toolkit.
      *
-     * @param \Piwik\DataTable $dataTable
+     * @param \Matomo\DataTable $dataTable
      * @return array
      */
     public function generate($dataTable)
@@ -307,7 +307,7 @@ class TreemapDataGenerator
             $plusOrMinus     = $data['evolution'] >= 0 ? '+' : '-';
             $evolutionChange = $plusOrMinus . abs($data['evolution']) . '%';
 
-            $data['metadata']['tooltip'] = Piwik::translate('General_XComparedToY', array(
+            $data['metadata']['tooltip'] = Matomo::translate('General_XComparedToY', array(
                 $data['metadata']['tooltip'] . "\n" . $evolutionChange,
                 $this->pastDataDate
             ));

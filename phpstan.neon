@@ -11,8 +11,8 @@ parameters:
     bootstrapFiles:
         - ../../bootstrap-phpstan.php
     universalObjectCratesClasses:
-        - Piwik\Config
-        - Piwik\View
-        - Piwik\ViewDataTable\Config
+        - Matomo\Config
+        - Matomo\View
+        - Matomo\ViewDataTable\Config
     scanDirectories:
         - ../../

@@ -8,14 +8,14 @@
  *
  */
 
-namespace Piwik\Plugins\TreemapVisualization\Visualizations;
+namespace Matomo\Plugins\TreemapVisualization\Visualizations;
 
-use Piwik\Common;
-use Piwik\DataTable\Map;
-use Piwik\Period\Range;
-use Piwik\Plugins\CoreVisualizations\Visualizations\Graph;
-use Piwik\Plugins\TreemapVisualization\TreemapConfig;
-use Piwik\Plugins\TreemapVisualization\TreemapDataGenerator;
+use Matomo\Common;
+use Matomo\DataTable\Map;
+use Matomo\Period\Range;
+use Matomo\Plugins\CoreVisualizations\Visualizations\Graph;
+use Matomo\Plugins\TreemapVisualization\TreemapConfig;
+use Matomo\Plugins\TreemapVisualization\TreemapDataGenerator;
 
 /**
  * DataTable visualization that displays DataTable data as a treemap (see

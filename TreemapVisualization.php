@@ -8,15 +8,15 @@
  *
  */
 
-namespace Piwik\Plugins\TreemapVisualization;
+namespace Matomo\Plugins\TreemapVisualization;
 
-use Piwik\Common;
-use Piwik\Plugins\TreemapVisualization\Visualizations\Treemap;
+use Matomo\Common;
+use Matomo\Plugins\TreemapVisualization\Visualizations\Treemap;
 
 /**
  * Plugin that contains the Treemap DataTable visualization.
  */
-class TreemapVisualization extends \Piwik\Plugin
+class TreemapVisualization extends \Matomo\Plugin
 {
     public function registerEvents()
     {
@@ -32,7 +32,7 @@ class TreemapVisualization extends \Piwik\Plugin
     {
         // treemap doesn't work w/ flat=1
         if (Common::getRequestVar('flat', 0)) {
-            $key = array_search('Piwik\\Plugins\\TreemapVisualization\\Visualizations\\Treemap', $visualizations);
+            $key = array_search('Matomo\Plugins\TreemapVisualization\Visualizations\Treemap', $visualizations);
             if ($key !== false) {
                 unset($visualizations[$key]);
             }
